@@ -61,6 +61,13 @@ class StudentController extends Controller
         }
     }
     public function delete(Request $req){
+        $student=Student::where('id','=',$req->id)->first();
+        $student->delete();
+        if($student){
+            return back()->with('success','delete successfully');
+        }else{
+            return back()->with('fail', 'Something Went Wrong');
+        }
     }
     public function view(Request $req){
         $student=Student::where('id','=',$req->id)->first();

@@ -92,7 +92,6 @@
                 </div>
               </div>
               <a href="{{route('edit',['id'=>$student->id])}}"class="btn btn-primary btn-block mb-4">EDIT</a>
-              <a href=""class="btn btn-primary btn-block mb-4">DELETE</a>
           </div>
         </div>
       </div>

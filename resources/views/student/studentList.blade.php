@@ -33,9 +33,9 @@
                     <th scope="row">{{$student->StudentName}}</th>
                     <td>{{$student->StudentDeperment}}</td>
                     <td>{{$student->StudentId}}</td>
-                    <td><a href="{{route('view',['id'=>$student->id])}}">VIEW</a></td>
-                    <td><a href="{{route('edit',['id'=>$student->id])}}">EDIT</a></td>
-                    <td><a href="">DELETE</a></td>
+                    <td><a href="{{route('view',['id'=>$student->id])}}" class="btn btn-primary btn-block mb-4">VIEW</a></td>
+                    <td><a href="{{route('edit',['id'=>$student->id])}}" class="btn btn-primary btn-block mb-4">EDIT</a></td>
+                    <td><a href="{{route('delete',['id'=>$student->id])}}" class="btn btn-primary btn-block mb-4">DELETE</a></td>
                   </tr>
                   @endforeach
                 </tbody>
