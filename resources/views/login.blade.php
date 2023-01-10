@@ -62,6 +62,9 @@
                           <div>
                             <input type="submit" class="btn btn-primary btn-block mb-4" value="Login">
                           </div>
+                          <div>
+                            <a href="{{ route('registration') }}"class="btn btn-primary btn-block mb-4">Registration</a>
+                          </div>
                         </div>
                     </div>
                 </div>

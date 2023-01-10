@@ -45,5 +45,5 @@
       </div>
     </div>
   </section>
-  <!-- Section: Design Block -->
+ <!-- Section: Design Block -->
 @endsection

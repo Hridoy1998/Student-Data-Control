@@ -31,7 +31,7 @@
                     <input type="text" class="form-control" name="StudentName" id="" placeholder="Enter your full name" value="{{old('StudentName')}}">
                     <label class="form-label" for="form3Example3">Full Name</label><br>
                     @error('StudentName')
-                        <span class="alert alert-danger">{{$message}}</span>
+                        <br><span class="alert alert-danger">{{$message}}</span>
                     @enderror
                   </div>
               <!-- 2 column grid layout with text inputs for the first and last names -->
@@ -47,7 +47,7 @@
                   </div>
                   <label class="form-label" for="form3Example1">Gender</label><br>
                     @error('gender')
-                        <span class="alert alert-danger">{{$message}}</span>
+                    <br><span class="alert alert-danger">{{$message}}</span>
                     @enderror
                 </div>
                 <div class="col-md-6 mb-4">
@@ -55,7 +55,7 @@
                     <input type="date" class="form-control" name="dob" id=""value="{{old('dob')}}">
                     <label class="form-label" for="form3Example2">Enter Date of Birth</label><br>
                     @error('dob')
-                        <span class="alert alert-danger">{{$message}}</span>
+                    <br><span class="alert alert-danger">{{$message}}</span>
                     @enderror
                   </div>
                 </div>
@@ -67,7 +67,7 @@
                     <input type="text"class="form-control" name="StudentId" id="" placeholder="Enter Student ID"value="{{old('StudentId')}}">
                     <label class="form-label" for="form3Example1">Student ID</label><br>
                     @error('StudentId')
-                        <span class="alert alert-danger">{{$message}}</span>
+                    <br><span class="alert alert-danger">{{$message}}</span>
                     @enderror
                   </div>
                 </div>
@@ -81,7 +81,7 @@
                     </select>
                     <label class="form-label" for="form3Example2">Student Deperment</label><br>
                     @error('StudentDeperment')
-                        <span class="alert alert-danger">{{$message}}</span>
+                    <br><span class="alert alert-danger">{{$message}}</span>
                     @enderror
                   </div>
                 </div>
@@ -92,7 +92,7 @@
                 <input type="email"class="form-control" name="StudentEmail" id="" placeholder="Enter student email"value="{{old('StudentEmail')}}">
                 <label class="form-label" for="form3Example3">Email address</label><br>
                 @error('StudentEmail')
-                    <span class="alert alert-danger">{{$message}}</span>
+                <br><span class="alert alert-danger">{{$message}}</span>
                 @enderror
               </div>
 

@@ -77,4 +77,53 @@ class StudentController extends Controller
         $student=Student::all();
         return view('student.studentList')->with('student',$student);
     }
+    public function GoSearch(){
+        return view('student.StudentSearch');
+    }
+    public function search(Request $req)
+    {
+
+        if($req->ajax()){
+            $output='';
+        $student=Student::where('StudentId','LIKE','%'.$req->search.'%')
+            ->orwhere('StudentDeperment','LIKE','%'.$req->search.'%')
+            ->orwhere('StudentName','LIKE','%'.$req->search.'%')->get();
+        if($student){
+            foreach($student as $student){
+                $output.='
+                <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Student Name</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Date of birth</th>
+                    <th scope="col">Student Email</th>
+                    <th scope="col">Deperment</th>
+                    <th scope="col">Student ID</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">'.$student->StudentName.'</th>
+                    <td>'.$student->gender.'</td>
+                    <td>'.$student->dob.'</td>
+                    <th scope="row">'.$student->StudentEmail.'</th>
+                    <td>'.$student->StudentDeperment.'</td>
+                    <td>'.$student->StudentId.'</td>
+                  </tr>
+                </tbody>
+              </table>
+
+                ';
+            }
+            return response()->json($output);
+        }
+        // else{
+        //     return response()->json([
+        //         'status'=>'nothing found'
+        //     ]);
+        // }
+    }
+    return view('student.studentList');
+    }
 }

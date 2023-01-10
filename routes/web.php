@@ -21,6 +21,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[AuthController::class,'GoLogin']);
 Route::post('/',[AuthController::class,'Login'])->name('login.submit');
 
+Route::get('/registration',[AuthController::class,'GoRegistration'])->name('registration');
+Route::post('/registration',[AuthController::class,'Registration'])->name('registration.submit');
+
+
+Route::get('/Profile/Admin',[AuthController::class,'profile'])->name('admin.profile');
+
 Route::get('/StudentList',[StudentController::class,'List'])->name('list');
 
 Route::get('/StudentAdd',[StudentController::class,'create'])->name('add');
@@ -32,3 +38,7 @@ Route::get('/StudentEdit/{id}',[StudentController::class,'update'])->name('edit'
 Route::post('/StudentEdit/{id}',[StudentController::class,'StudentEdit'])->name('student.edit');
 
 Route::get('/StudentView/{id}',[StudentController::class,'view'])->name('view');
+
+
+Route::get('/search',[StudentController::class,'GoSearch'])->name('student.search');
+Route::get('/student/search',[StudentController::class,'search'])->name('search');
