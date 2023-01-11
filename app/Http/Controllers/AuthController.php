@@ -20,7 +20,7 @@ class AuthController extends Controller
             if($admin->Password == $req->password)
                 {
                     $req->session()->put('Admin', $admin->id);
-                    return view('student.studentAdd');
+                    return redirect(route('admin.profile'));
                 }
             else
                 {
