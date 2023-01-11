@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::get('/logout',[AuthController::class,'logout'])->name('logOut');
 Route::get('/',[AuthController::class,'GoLogin'])->name('login');
 Route::post('/',[AuthController::class,'Login'])->name('login.submit');
 

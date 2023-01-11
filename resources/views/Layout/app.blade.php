@@ -27,6 +27,9 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{{route('student.search')}}">Search Student</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{route('logOut')}}">LOGOUT</a>
+                </li>
               </ul>
             </div>
           </nav>

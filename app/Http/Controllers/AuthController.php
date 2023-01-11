@@ -75,4 +75,11 @@ class AuthController extends Controller
         $Admin=Admin::Where('id','=',$n)->first();
         return view('Profile')->with("Admin",$Admin);
     }
+    public function logout()
+    {
+
+        session()->flush();
+
+        return redirect(route('login'));
+    }
 }
