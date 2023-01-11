@@ -18,7 +18,7 @@
 
         <div class="row d-flex justify-content-center">
           <div class="col-lg-8">
-            <h2 class="fw-bold mb-5">Student List</h2>
+            <h2 class="fw-bold mb-5">Search Student</h2>
                 <input type="text" class="form-outline mb-4 form-control" name="search" id="search" placeholder="search here with Name or ID">
                 <div class="search_result">
 

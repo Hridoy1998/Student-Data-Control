@@ -110,6 +110,7 @@ class StudentController extends Controller
                     <th scope="row">'.$student->StudentEmail.'</th>
                     <td>'.$student->StudentDeperment.'</td>
                     <td>'.$student->StudentId.'</td>
+
                   </tr>
                 </tbody>
               </table>
@@ -118,11 +119,6 @@ class StudentController extends Controller
             }
             return response()->json($output);
         }
-        // else{
-        //     return response()->json([
-        //         'status'=>'nothing found'
-        //     ]);
-        // }
     }
     return view('student.studentList');
     }
