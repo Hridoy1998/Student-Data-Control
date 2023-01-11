@@ -70,7 +70,9 @@ class AuthController extends Controller
         return view('reg');
     }
 
-    public function profile(){
-        return view('Profile');
+    public function profile(Request $req){
+        $n= $req->session()->get('Admin');
+        $Admin=Admin::Where('id','=',$n)->first();
+        return view('Profile')->with("Admin",$Admin);
     }
 }

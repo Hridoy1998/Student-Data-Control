@@ -19,9 +19,7 @@
         <div class="row d-flex justify-content-center">
           <div class="col-lg-8">
             <h2 class="fw-bold mb-5">Admin Profile</h2>
-                {{-- <img src="{{asset('pp/'.$s_user->pp)}}" alt="Admin" class="rounded-circle" width="150"> --}}
-                            <img src="smiley.gif" alt="Admin" style="vertical-align:middle;margin:100px 0px">
-                {{-- <img src="https://images.app.goo.gl/3Vr7uW8PbxRqkGTi8" alt="Admin" class="rounded-circle" width="150"> --}}
+                <img src="{{asset('pp/'.$Admin->pp)}}" alt="Admin" class="rounded-circle" width="150">
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
@@ -30,7 +28,7 @@
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <label class="form-label" for="form3Example2"><h4> </h4></label><br>
+                    <label class="form-label" for="form3Example2"><h4>{{$Admin->AdminName}}</h4></label><br>
                   </div>
                 </div>
               </div>
@@ -42,7 +40,7 @@
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <label class="form-label" for="form3Example2"><h4> </h4></label><br>
+                    <label class="form-label" for="form3Example2"><h4>{{$Admin->gender}}</h4></label><br>
                   </div>
                 </div>
               </div>
@@ -54,7 +52,7 @@
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <label class="form-label" for="form3Example2"><h4> </h4></label><br>
+                    <label class="form-label" for="form3Example2"><h4>{{$Admin->dob}}</h4></label><br>
                   </div>
                 </div>
               </div>
@@ -66,7 +64,7 @@
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <label class="form-label" for="form3Example2"><h4> </h4></label><br>
+                    <label class="form-label" for="form3Example2"><h4>{{$Admin->UserName}}</h4></label><br>
                   </div>
                 </div>
               </div>
@@ -78,7 +76,7 @@
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <label class="form-label" for="form3Example2"><h4> </h4></label><br>
+                    <label class="form-label" for="form3Example2"><h4>{{$Admin->AdminEmail}}</h4></label><br>
                   </div>
                 </div>
               </div>

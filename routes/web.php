@@ -18,27 +18,27 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/',[AuthController::class,'GoLogin']);
+Route::get('/',[AuthController::class,'GoLogin'])->name('login');
 Route::post('/',[AuthController::class,'Login'])->name('login.submit');
 
 Route::get('/registration',[AuthController::class,'GoRegistration'])->name('registration');
 Route::post('/registration',[AuthController::class,'Registration'])->name('registration.submit');
 
 
-Route::get('/Profile/Admin',[AuthController::class,'profile'])->name('admin.profile');
+Route::get('/Profile/Admin',[AuthController::class,'profile'])->name('admin.profile')->middleware('admin');
 
-Route::get('/StudentList',[StudentController::class,'List'])->name('list');
+Route::get('/StudentList',[StudentController::class,'List'])->name('list')->middleware('admin');
 
-Route::get('/StudentAdd',[StudentController::class,'create'])->name('add');
-Route::post('/StudentAdd',[StudentController::class,'StudentAdd'])->name('student.add');
+Route::get('/StudentAdd',[StudentController::class,'create'])->name('add')->middleware('admin');
+Route::post('/StudentAdd',[StudentController::class,'StudentAdd'])->name('student.add')->middleware('admin');
 
-Route::get('/StudentDelete/{id}',[StudentController::class,'delete'])->name('delete');
+Route::get('/StudentDelete/{id}',[StudentController::class,'delete'])->name('delete')->middleware('admin');
 
-Route::get('/StudentEdit/{id}',[StudentController::class,'update'])->name('edit');
-Route::post('/StudentEdit/{id}',[StudentController::class,'StudentEdit'])->name('student.edit');
+Route::get('/StudentEdit/{id}',[StudentController::class,'update'])->name('edit')->middleware('admin');
+Route::post('/StudentEdit/{id}',[StudentController::class,'StudentEdit'])->name('student.edit')->middleware('admin');
 
-Route::get('/StudentView/{id}',[StudentController::class,'view'])->name('view');
+Route::get('/StudentView/{id}',[StudentController::class,'view'])->name('view')->middleware('admin');
 
 
-Route::get('/search',[StudentController::class,'GoSearch'])->name('student.search');
-Route::get('/student/search',[StudentController::class,'search'])->name('search');
+Route::get('/search',[StudentController::class,'GoSearch'])->name('student.search')->middleware('admin');
+Route::get('/student/search',[StudentController::class,'search'])->name('search')->middleware('admin');
