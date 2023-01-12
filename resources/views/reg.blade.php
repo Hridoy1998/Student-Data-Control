@@ -112,8 +112,11 @@
                         <div>
                         <div>
                           <div>
-                            <input type="submit" class="btn btn-primary btn-block mb-4" value="Login">
+                            <input type="submit" class="btn btn-primary btn-block mb-4" value="Submit">
                           </div>
+                        </div>
+                        <div>
+                            <a href="{{ route('login') }}"class="btn btn-primary btn-block mb-4">Back</a>
                         </div>
                     </div>
                 </div>
